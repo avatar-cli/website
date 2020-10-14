@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #FED43F;
+        /* Primary theme text color */
+        --primary-text-color: #543631;
+        /* Primary theme link color */
+        --primary-link-color: #F9BB2D;
+        /* Secondary color: the background body color */
+        --secondary-color: #fcfaf6;
+        --secondary-text-color: #303030;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #d46e13;
+    }
+</style>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https:&#x2F;&#x2F;www.avatar-cli.dev&#x2F;juice.css">
+    
+    
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute" style="background-color: transparent">
+        
+
+<a href="https:&#x2F;&#x2F;www.avatar-cli.dev&#x2F;">
+    <div class="logo">
+        <img src="https:&#x2F;&#x2F;www.avatar-cli.dev&#x2F;juice.svg" alt="logo">
+        Juice
+    </div>
+</a>
+
+<nav>
+    
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <section class="text-center">
+            <h1 class="heading-text" style="font-size: 50px">
+                Build your static website
+            </h1>
+            <h3 class="title-text">
+                <b>Juice</b> is an intuitive, elegant, and lightweight Zola theme for product websites.
+            </h3>
+            <div>
+                <a class="github-button" href="https://github.com/huhu/juice" data-size="large" data-show-count="true"
+                   aria-label="Star huhu/juice on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/huhu/juice/fork" data-size="large"
+                   data-show-count="true" aria-label="Fork huhu/juice on GitHub">Fork</a>
+            </div>
+        </section>
+        <img class="hero-image" style="width: 50%" src="https:&#x2F;&#x2F;www.avatar-cli.dev&#x2F;juice.svg">
+
+        <div class="explore-more text"
+            onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+            Explore More ⇩
+        </div>
+        <style>
+            .hero section {
+                padding: 0 5rem;
+            }
+            @media screen and (max-width: 768px) {
+                .hero section {
+                    padding: 0 2rem;
+                }
+
+                .hero-image {
+                    display: none
+                }
+            }
+        </style>
+        
+    </div>
+
+    
+
+    <main>
+        
+        
+        
+        
+
+        <div class="content text">
+            
+            <div id="features" class="heading-text">Overview</div>
+            
+            
+        </div>
+
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://huhu.io">Huhu.io</a> © 2020
+        </small>
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>
