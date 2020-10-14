@@ -5,6 +5,8 @@ pages:
   image: registry.gitlab.com/avatar-cli/website/zola:latest
   stage: deploy
   script:
+    - git submodule init
+    - git submodule update
     - zola build
   artifacts:
     paths:
