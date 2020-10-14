@@ -1,0 +1,47 @@
+{% import "_macros.html" as macros %}
+{% import "blog_macros.html" as blog_macros %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include "_variables.html" %}
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="{{ get_url(path="juice.css") }}">
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+    {% block header %}
+
+    <header class="pos-absolute" style="background-color: var(--primary-color)">
+        {{ macros::render_header() }}
+    </header>
+
+    {% endblock header %}
+
+    <main>
+        <div class="content text">
+            {% block content %}
+                {% for page in paginator.pages %}
+                {{ blog_macros::post_title(page=page) }}
+                {% endfor %}
+            {% endblock content %}
+        </div>
+    </main>
+
+    {% block footer %}
+    <footer>
+        <small class="subtext">
+            By <a href="https://blog.coderspirit.xyz">Andrés Correa Casablanca</a> © 2020
+        </small>
+    </footer>
+    {% endblock footer %}
+</body>
+
+</html>
