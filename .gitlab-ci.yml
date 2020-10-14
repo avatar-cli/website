@@ -2,9 +2,10 @@ stages:
     - deploy
 
 pages:
+  image: registry.gitlab.com/avatar-cli/website/zola:latest
   stage: deploy
   script:
-    - "true"
+    - zola build
   artifacts:
     paths:
       - public
