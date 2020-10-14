@@ -16,6 +16,6 @@ theme = "juice"
 [extra]
 # Put all your custom variables here
 
-juice_logo_name = "Juice"
-juice_logo_path = "juice.svg"
+juice_logo_name = "Avatar-CLI"
+juice_logo_path = "avatarcli_logo.svg"
 
