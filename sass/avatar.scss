@@ -7,6 +7,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--secondary-color);
+
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
 }
 
 a {
@@ -133,6 +137,8 @@ footer {
   align-items: center;
   background-color: #202020;
   color: #fcfcfc;
+
+  margin-top:auto;
 
   a {
     color: #fcfcfc;
