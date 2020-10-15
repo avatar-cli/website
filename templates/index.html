@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <meta property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
-    <meta property="og:image" content="{{ get_url(path="avatarcli_logo.svg") }}" />
+    <meta name="title" property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
+    <meta name="image" property="og:image" content="{{ get_url(path="avatarcli_logo.svg") }}" />
     <meta name="twitter:card" content="summary"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include "_variables.html" %}
