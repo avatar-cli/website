@@ -23,3 +23,12 @@ Problems solved by Avatar-CLI and surrounding practices:
   environments tend to accumulate differences and mismatches over time.
   Avatar-CLI allows using exactly the same tools, having a single source of
   truth for their configuration.
+
+## Features
+
+- Multiplatform: Linux and MacOs.
+- Tools version pinning. 
+- Ability to combine many docker images, no need to create a catch-all image.
+- SSH-Agent integration.
+- GPG-Agent Integration (only in Linux)
+- JetBrains IDEs integration.

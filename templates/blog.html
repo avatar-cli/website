@@ -1,5 +1,4 @@
 {% import "_macros.html" as macros %}
-{% import "blog_macros.html" as blog_macros %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,28 +7,26 @@
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include "_variables.html" %}
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="{{ get_url(path="juice.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="avatar.css") }}">
     {% block head %}
     {% endblock head %}
 </head>
 
 <body>
     {% block header %}
-
-    <header class="pos-absolute" style="background-color: var(--primary-color)">
+    <header class="box-shadow">
         {{ macros::render_header() }}
     </header>
-
     {% endblock header %}
 
-    <main>
-        <div class="content text">
+    <main class="blog">
+        <div class="blog content text">
             {% block content %}
                 {% for page in paginator.pages %}
-                {{ blog_macros::post_title(page=page) }}
+                <a href="{{ page.permalink }}"><h2 class="heading-text">[{{ page.date }}] {{ page.title }}</h2></a>
                 {% endfor %}
             {% endblock content %}
         </div>
