@@ -1,5 +1,13 @@
 stages:
-    - deploy
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - 'true'
+  except:
+    - main
 
 pages:
   image: registry.gitlab.com/avatar-cli/website/zola:latest
