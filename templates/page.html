@@ -5,9 +5,9 @@
 {% block ogtitle %}{{ page.title }} | {{ super() }}{% endblock ogtitle %}
 
 {% block head %}
-<meta property="og:url" content="{{ page.permalink }}" />
-<meta name="twitter:site" content="avatar_cli"></meta>
-<meta name="twitter:creator" content="castarco"></meta>
+<meta property="og:url" content="{{ page.permalink | safe }}" />
+<meta name="twitter:site" content="avatar_cli" />
+<meta name="twitter:creator" content="castarco" />
 {% endblock head %}
 
 {% block header %}

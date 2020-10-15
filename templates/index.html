@@ -6,18 +6,18 @@
     <meta charset="UTF-8">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <meta name="title" property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
-    <meta name="image" property="og:image" content="{{ get_url(path="og_avatarcli_logo.png") }}" />
-    <meta name="twitter:card" content="summary"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" property="og:image" content="{{ get_url(path="og_avatarcli_logo.png") | safe }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {% include "_variables.html" %}
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="{{ get_url(path="avatar.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="avatar.css") | safe }}">
     {% block head %}
     <meta property="og:description" content="Avatar-CLI's official website" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ get_url(path="@/_index.md") }}" />
+    <meta property="og:url" content="{{ get_url(path="@/_index.md") | safe }}" />
     {% endblock head %}
 </head>
 
@@ -58,7 +58,7 @@
                    aria-label="Fork avatar-cli/avatar-cli on GitHub">Fork</a>
             </div>
         </section>
-        <img class="hero-image" style="width: 50%" src="{{ get_url(path="avatarcli_logo.svg") }}">
+        <img class="hero-image" style="width: 50%" src="{{ get_url(path="avatarcli_logo.svg") | safe }}">
 
         <div class="explore-more text"
             onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">

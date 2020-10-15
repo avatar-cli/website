@@ -5,7 +5,7 @@
 {% block ogtitle %}{{ page.title }} | Avatar-CLI Blog{% endblock ogtitle %}
 
 {% block head %}
-<meta property="og:url" content="{{ page.permalink }}" />
+<meta property="og:url" content="{{ page.permalink | safe }}" />
 {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
 <meta property="og:type" content="article" />
 <meta name="twitter:site" content="avatar_cli"></meta>

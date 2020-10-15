@@ -7,14 +7,14 @@
     <title>{% block title %}{{ section.title }}{% endblock title %}</title>
     <meta property="og:title" content="{{ section.title }}" />
     {% if section.description %}<meta property="og:description" content="{{ section.description }}" />{% endif %}
-    <meta property="og:url" content="{{ section.permalink }}" />
-    <meta name="twitter:card" content="summary"></meta>
+    <meta property="og:url" content="{{ section.permalink | safe }}" />
+    <meta name="twitter:card" content="summary" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include "_variables.html" %}
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="{{ get_url(path="avatar.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="avatar.css") | safe }}">
     {% block head %}
     {% endblock head %}
 </head>
@@ -30,7 +30,7 @@
         <div class="blog content text">
             {% block content %}
                 {% for page in paginator.pages %}
-                <a href="{{ page.permalink }}"><h2 class="heading-text">{{ page.title }}<br/><span class="subtitle-date">{{ page.date }}</span></h2></a>
+                <a href="{{ page.permalink | safe }}"><h2 class="heading-text">{{ page.title }}<br/><span class="subtitle-date">{{ page.date }}</span></h2></a>
                 {% endfor %}
             {% endblock content %}
         </div>
