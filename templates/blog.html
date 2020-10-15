@@ -4,7 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <title>{% block title %}{{ section.title }}{% endblock title %}</title>
+    <meta property="og:title" content="{{ section.title }}" />
+    {% if section.description %}<meta property="og:description" content="{{ section.description }}" />{% endif %}
+    <meta property="og:url" content="{{ section.permalink }}" />
+    <meta name="twitter:card" content="summary"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include "_variables.html" %}
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">

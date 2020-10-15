@@ -1,6 +1,8 @@
 # The URL the site will be built for
 base_url = "https://www.avatar-cli.dev"
 
+title = "Avatar-CLI"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 

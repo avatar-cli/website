@@ -1,5 +1,6 @@
 +++
-title = "Avatar-CLI Week #01"
+title = "Weekly Report #01"
+description = "Avatar-CLI's weekly development report"
 date = 2020-09-10
 +++
 

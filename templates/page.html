@@ -1,13 +1,11 @@
 {% import "_macros.html" as macros %}
 {% extends "index.html" %}
 
-{% block title %}{{ page.title }} | Avatar-CLI Blog{% endblock title %}
-{% block ogtitle %}{{ page.title }} | Avatar-CLI Blog{% endblock ogtitle %}
+{% block title %}{{ page.title }} | {{ super() }}{% endblock title %}
+{% block ogtitle %}{{ page.title }} | {{ super() }}{% endblock ogtitle %}
 
 {% block head %}
 <meta property="og:url" content="{{ page.permalink }}" />
-{% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
-<meta property="og:type" content="article" />
 <meta name="twitter:site" content="avatar_cli"></meta>
 <meta name="twitter:creator" content="castarco"></meta>
 {% endblock head %}
@@ -19,6 +17,6 @@
 {% endblock header %}
 
 {% block content %}
-<h1>{{ page.title }}<br/><span class="subtitle-date">{{ page.date }}</span></h1>
+<h1>{{ page.title }}</h1>
 {{ page.content | safe }}
 {% endblock content %}

@@ -1,5 +1,5 @@
 +++
-title = "Blog"
+title = "Avatar-CLI Blog"
 sort_by = "date"
 
 insert_anchor_links = "right"

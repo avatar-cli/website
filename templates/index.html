@@ -5,6 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
+    <meta property="og:image" content="{{ get_url(path="avatarcli_logo.svg") }}" />
+    <meta name="twitter:card" content="summary"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include "_variables.html" %}
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
@@ -12,6 +15,9 @@
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="{{ get_url(path="avatar.css") }}">
     {% block head %}
+    <meta property="og:description" content="Avatar-CLI's official website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ get_url(path="@/_index.md") }}" />
     {% endblock head %}
 </head>
 
