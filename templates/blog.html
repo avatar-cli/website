@@ -9,6 +9,7 @@
     {% if section.description %}<meta property="og:description" content="{{ section.description }}" />{% endif %}
     <meta property="og:url" content="{{ section.permalink | safe }}" />
     <meta name="twitter:card" content="summary" />
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) | safe }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% include "_variables.html" %}
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
