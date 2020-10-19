@@ -28,6 +28,7 @@
 
     <main class="blog">
         <div class="blog content text">
+            <h1 style="display: none; visibility: hidden;">Blog</h1>
             {% block content %}
                 {% for page in paginator.pages %}
                 <a href="{{ page.permalink | safe }}"><h2 class="heading-text">{{ page.title }}<br/><span class="subtitle-date">{{ page.date }}</span></h2></a>

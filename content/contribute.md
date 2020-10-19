@@ -1,5 +1,6 @@
 +++
 title = "Contribute"
+in_search_index = false
 +++
 
 ## Development
@@ -45,6 +46,7 @@ For now there are three ways you can choose to sponsor Avatar-CLI:
 <div style="display: flex; max-width: 720px; margin-bottom: 40px;">
 <a href="https://www.patreon.com/coder_spirit"><img
   src="/patreon.svg"
+  alt="Patreon Logo"
   style="height: 80px; width: 80px; margin: 0 10px; object-fit: contain; align-self: flex-start;" /></a>
 <p style="flex: 1 1 auto; margin-top: 0;">
 Via the <a href="https://www.patreon.com/coder_spirit">Coder Spirit's Patreon page</a>.
@@ -54,6 +56,7 @@ Via the <a href="https://www.patreon.com/coder_spirit">Coder Spirit's Patreon pa
 <div style="display: flex; max-width: 720px; margin-bottom: 40px;">
 <a href="https://ko-fi.com/coderspirit"><img
   src="/ko-fi.png"
+  alt="Ko-Fi Logo"
   style="height: 80px; width: 80px; margin: 0 10px; object-fit: contain; align-self: flex-start;" /></a>
 <p style="flex: 1 1 auto; margin-top: 0;">
 Via the <a href="https://ko-fi.com/coderspirit">Coder Spirit's Ko-Fi page</a>.
@@ -63,6 +66,7 @@ Via the <a href="https://ko-fi.com/coderspirit">Coder Spirit's Ko-Fi page</a>.
 <div style="display: flex; max-width: 720px; margin-bottom: 40px;">
 <a href="https://github.com/sponsors/castarco"><img
   src="/gh_sponsors.svg"
+  alt="Github Sponsors Logo"
   style="height: 80px; width: 80px; margin: 0 10px; object-fit: contain; align-self: flex-start;" /></a>
 <p style="flex: 1 1 auto; margin-top: 0;">
 Via the <a href="https://github.com/sponsors/castarco">Github's Sponsorship Program</a>.

@@ -1,0 +1,105 @@
+
+{% import "_macros.html" as macros %}
+{% set section = get_section(path="documentation/_index.md") %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
+    <meta property="og:image" content="{{ get_url(path="og_avatarcli_logo.png") | safe }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    {% include "_variables.html" %}
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="{{ get_url(path="avatar.css") | safe }}">
+    {% block head %}
+    <meta property="og:description" content="Avatar-CLI's official website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ get_url(path="@/_index.md") | safe }}" />
+    {% endblock head %}
+</head>
+
+<body>
+    {% block header %}
+    <header class="box-shadow">
+        {{ macros::render_header() }}
+    </header>
+    {% endblock header %}
+    
+
+    <main>
+        {% block toc %}
+        <div class="toc">
+            <div class="toc-sticky">
+                {% for page in section.pages %}
+                <div class="toc-item">
+                    <a class="subtext" href="{{page.permalink | safe}}">{{ page.title }}</a>
+                </div>
+                {% if page.toc %}
+                {% for h in page.toc %}
+                <div class="toc-item-child">
+                    <a class="subtext" href="{{h.permalink | safe}}"><small>- {{ h.title }}</small></a>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endblock toc %}
+
+        <div class="content text">
+        {% block content %}
+        <h1>{{ page.title }}<br/><span class="subtitle-date">{{ page.date }}</span></h1>
+        {{ page.content | safe }}
+        {% endblock content %}
+        </div>
+    </main>
+
+    {% block footer %}
+    <footer>
+        <small class="subtext">
+            By <a href="https://blog.coderspirit.xyz">Andrés Correa Casablanca</a> © 2020
+        </small>
+    </footer>
+    {% endblock footer %}
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

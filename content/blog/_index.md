@@ -2,6 +2,7 @@
 title = "Avatar-CLI Blog"
 sort_by = "date"
 
+in_search_index = false
 insert_anchor_links = "right"
 
 template = "blog.html"

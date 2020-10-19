@@ -1,5 +1,6 @@
 +++
 title = "Avatar-CLI"
+in_search_index = false
 +++
 
 ## Why?
