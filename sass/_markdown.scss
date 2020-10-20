@@ -11,19 +11,23 @@
   padding: 1.25em 1.5em;
   white-space: pre;
   word-wrap: normal;
-  // background-color: white;
+  background-color: rgb(176, 204, 195);
   color: #4a4a4a;
   font-size: .875em;
   font-family: monospace;
 }
 
 .content code {
-  // background-color: white;
+  background-color: rgb(176, 204, 195);
   color: #4a4a4a;
   font-size: .875em;
   font-weight: normal;
-  padding: 0.25em 0.5em 0.25em;
+  padding: 0.125em;
   font-family: monospace;
+}
+
+.content pre>code {
+  background-color: unset;
 }
 
 .content a {
