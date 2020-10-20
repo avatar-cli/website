@@ -8,6 +8,11 @@
     <meta property="og:title" content="{{ section.title }}" />
     {% if section.description %}<meta property="og:description" content="{{ section.description }}" />{% endif %}
     <meta property="og:url" content="{{ section.permalink | safe }}" />
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon32.png") | safe }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon48.png") | safe }}" sizes="48x48">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon64.png") | safe }}" sizes="64x64">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon96.png") | safe }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon128.png") | safe }}" sizes="128x128">
     <meta name="twitter:card" content="summary" />
     <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) | safe }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

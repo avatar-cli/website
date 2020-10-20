@@ -9,6 +9,11 @@
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <meta property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
     <meta property="og:image" content="{{ get_url(path="og_avatarcli_logo.png") | safe }}" />
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon32.png") | safe }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon48.png") | safe }}" sizes="48x48">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon64.png") | safe }}" sizes="64x64">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon96.png") | safe }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon128.png") | safe }}" sizes="128x128">
     <meta name="twitter:card" content="summary" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {% include "_variables.html" %}
