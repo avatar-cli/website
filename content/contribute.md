@@ -41,7 +41,7 @@ still want to help us, you have the option to sponsor its development. This
 will allow us to devote more time to it, so you can have a better product in the
 end.
 
-For now there are three ways you can choose to sponsor Avatar-CLI:
+For now there are four ways you can choose to sponsor Avatar-CLI:
 
 <div style="display: flex; max-width: 720px; margin-bottom: 40px;">
 <a href="https://www.patreon.com/coder_spirit"><img
@@ -70,6 +70,17 @@ Via the <a href="https://ko-fi.com/coderspirit">Coder Spirit's Ko-Fi page</a>.
   style="height: 80px; width: 80px; margin: 0 10px; object-fit: contain; align-self: flex-start;" /></a>
 <p style="flex: 1 1 auto; margin-top: 0;">
 Via the <a href="https://github.com/sponsors/castarco">Github's Sponsorship Program</a>.
+</p>
+</div>
+
+
+<div style="display: flex; max-width: 720px; margin-bottom: 40px;">
+<a href="https://www.paypal.com/donate?hosted_button_id=B4GAXGG68L9MG"><img
+  src="/images/paypal.svg"
+  alt="Paypal Logo"
+  style="height: 80px; width: 80px; margin: 0 10px; object-fit: contain; align-self: flex-start;" /></a>
+<p style="flex: 1 1 auto; margin-top: 0;">
+Via <a href="https://www.paypal.com/donate?hosted_button_id=B4GAXGG68L9MG">Paypal</a>.
 </p>
 </div>
 
