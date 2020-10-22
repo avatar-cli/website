@@ -71,3 +71,14 @@ h3, .subtitle-text {
 .content h3+p {
   margin: 5px 0 18px 0;
 }
+
+.pager_links {
+  text-align: center;
+  width: fit-content;
+  padding: 40px;
+}
+
+.text.content.documentation p {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}

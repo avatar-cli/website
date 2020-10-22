@@ -21,4 +21,11 @@
 {% block content %}
 <h1>{{ page.title }}<br/><span class="subtitle-date">{{ page.date }}</span></h1>
 {{ page.content | safe }}
+{% if page.earlier or page.later %}
+<div class="text pager_links">
+    {% if page.earlier %}<a href="{{ page.earlier.permalink | safe }}">Previous</a>{% endif %}
+    {% if page.earlier and page.later %}&nbsp;···&nbsp;{% endif %}
+    {% if page.later %}<a href="{{ page.later.permalink | safe }}">Next</a>{% endif %}
+</div>
+{% endif %}
 {% endblock content %}

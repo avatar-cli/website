@@ -42,6 +42,13 @@
             {% endblock content %}
         </div>
     </main>
+    {% if paginator.previous or paginator.next %}
+    <div class="text pager_links">
+        {% if paginator.previous %}<a href="{{ paginator.previous | safe }}">Previous</a>{% endif %}
+        {% if paginator.previous and paginator.next %}&nbsp;···&nbsp;{% endif %}
+        {% if paginator.next %}<a href="{{ paginator.next | safe }}">Next</a>{% endif %}
+    </div>
+    {% endif %}
 
     {% block footer %}
     <footer>
