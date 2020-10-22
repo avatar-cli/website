@@ -1,6 +1,6 @@
 +++
 title = "Troubleshooting"
-weight = 5
+weight = 6
 +++
 
 ## Interactive Git Hooks using tools managed by Avatar-CLI
