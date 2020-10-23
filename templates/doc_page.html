@@ -9,6 +9,7 @@
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <meta property="og:title" content="{% block ogtitle %}{{ config.title }}{% endblock ogtitle %}" />
     <meta property="og:image" content="{{ get_url(path="og_avatarcli_logo.png") | safe }}" />
+    <link rel="canonical" href="{% if page %}{{ page.permalink | safe }}{% elif section %}{{ section.permalink | safe }}{% endif %}" />
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon32.png") | safe }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon48.png") | safe }}" sizes="48x48">
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon64.png") | safe }}" sizes="64x64">

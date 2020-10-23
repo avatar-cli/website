@@ -8,6 +8,7 @@
     <meta property="og:title" content="{{ section.title }}" />
     {% if section.description %}<meta property="og:description" content="{{ section.description }}" />{% endif %}
     <meta property="og:url" content="{{ section.permalink | safe }}" />
+    <link rel="canonical" href="{% if page %}{{ page.permalink | safe }}{% elif section %}{{ section.permalink | safe }}{% endif %}" />
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon32.png") | safe }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon48.png") | safe }}" sizes="48x48">
     <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon64.png") | safe }}" sizes="64x64">
@@ -44,9 +45,9 @@
     </main>
     {% if paginator.previous or paginator.next %}
     <div class="text pager_links">
-        {% if paginator.previous %}<a href="{{ paginator.previous | safe }}">Previous</a>{% endif %}
+        {% if paginator.previous %}<a href="{{ paginator.previous | safe }}" rel="prev">Previous</a>{% endif %}
         {% if paginator.previous and paginator.next %}&nbsp;···&nbsp;{% endif %}
-        {% if paginator.next %}<a href="{{ paginator.next | safe }}">Next</a>{% endif %}
+        {% if paginator.next %}<a href="{{ paginator.next | safe }}" rel="next">Next</a>{% endif %}
     </div>
     {% endif %}
 
